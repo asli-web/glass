@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
 	padding: 0;
 	margin: 0;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 body {
@@ -13,18 +21,58 @@ body {
 	width: 100%;
 	height: 100vh;
 
-	background: linear-gradient(
-		to right top,
-		rgb(62 152 226), rgb(189 208 224), rgb(109 117 173) );
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		right top,
+		from(rgb(62 152 226)),
+		color-stop(rgb(189 208 224)),
+		to(rgb(109 117 173))
 	);
 
+	background: -o-linear-gradient(
+		left bottom,
+		rgb(62 152 226),
+		rgb(189 208 224),
+		rgb(109 117 173)
+	);
+
+	background: linear-gradient(
+		to right top,
+		rgb(62 152 226),
+		rgb(189 208 224),
+		rgb(109 117 173)
+	);
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	/* 	background-color: rgb(169, 162, 175);
  */
 }
 .circle {
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		right top,
+		from(rgb(213, 122, 216)),
+		color-stop(rgb(248, 175, 255)),
+		to(rgb(230, 189, 218))
+	);
+	background: -o-linear-gradient(
+		left bottom,
+		rgb(213, 122, 216),
+		rgb(248, 175, 255),
+		rgb(230, 189, 218)
+	);
 	background: linear-gradient(
 		to right top,
 		rgb(213, 122, 216),
@@ -38,6 +86,18 @@ body {
 .glass {
 	width: 55%;
 	height: 80vh;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(rgba(255, 255, 255, 0.521)),
+		to(rgba(255, 255, 255, 0.226))
+	);
+	background: -o-linear-gradient(
+		left,
+		rgba(255, 255, 255, 0.521),
+		rgba(255, 255, 255, 0.226)
+	);
 	background: linear-gradient(
 		to right,
 		rgba(255, 255, 255, 0.521),
@@ -45,15 +105,27 @@ body {
 	);
 	z-index: 1;
 	border-radius: 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-backdrop-filter: blur(4px);
 	backdrop-filter: blur(4px);
 }
 .user {
 	height: 20%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	font-size: large;
 }
@@ -64,12 +136,35 @@ img {
 	border: 1px solid rgba(0, 0, 0, 0.164);
 }
 .links {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
 	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: space-evenly;
+	-ms-flex-pack: space-evenly;
 	justify-content: space-evenly;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	text-align: center;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(rgba(255, 255, 255, 0.247)),
+		to(rgba(255, 255, 255, 0.137))
+	);
+	background: -o-linear-gradient(
+		left,
+		rgba(255, 255, 255, 0.247),
+		rgba(255, 255, 255, 0.137)
+	);
 	background: linear-gradient(
 		to right,
 		rgba(255, 255, 255, 0.247),
@@ -79,10 +174,19 @@ img {
 }
 
 .info {
+	-webkit-box-flex: 2;
+	-ms-flex: 2;
 	flex: 2;
 	margin: 2rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	color: rgba(59, 89, 99, 0.466);
 }
@@ -90,18 +194,36 @@ img {
 	font-size: 39px;
 }
 .cards {
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(rgba(255, 255, 255, 0.521)),
+		to(rgba(255, 255, 255, 0.226))
+	);
+	background: -o-linear-gradient(
+		left,
+		rgba(255, 255, 255, 0.521),
+		rgba(255, 255, 255, 0.226)
+	);
 	background: linear-gradient(
 		to right,
 		rgba(255, 255, 255, 0.521),
 		rgba(255, 255, 255, 0.226)
 	);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin: 2rem, 0;
 	border-radius: 15px;
 	padding: 1rem;
 	width: 100%;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	text-align: center;
+
+	-webkit-box-shadow: 6px 6px 20px 0 rgba(172, 152, 152, 0.274);
 
 	box-shadow: 6px 6px 20px 0 rgba(172, 152, 152, 0.274);
 }
@@ -129,6 +251,7 @@ img {
 	border-radius: 15px;
 	position: relative;
 	overflow: hidden;
+	-webkit-box-shadow: 0px 0px 4px 0px rgb(159, 157, 160);
 	box-shadow: 0px 0px 4px 0px rgb(159, 157, 160);
 }
 .progress-bar.one::after {
